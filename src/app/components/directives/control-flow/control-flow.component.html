@@ -1,0 +1,16 @@
+<div class="p-5 bg-dark text-light">
+  <h1 class="text-center text-warning mb-4">Our Meals</h1>
+  <div class="container">
+    <div class="row d-flex gap-4 justify-content-evenly">
+      @for (product of products; track product.Pid) {
+      @if (product.Pquantity >= 0) {
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="rounded-1">
+          <app-product-card [myProduct]="product"></app-product-card>
+        </div>
+      </div>
+      }
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.bg-gradient {
+  background-color: #e3f2fd;
+}
+
+/* .container {
+  max-width: 300px;
+} */
+
+.icons{
+  width: 300px;
+}

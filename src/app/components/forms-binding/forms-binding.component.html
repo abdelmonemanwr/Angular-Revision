@@ -1,0 +1,16 @@
+<div class="bg-dark p-5 text-light text-center">
+  <h1 class="text-warning my-4">Two Way Binding Using Forms Module</h1>
+  <div class="container">
+    <input [(ngModel)]="textBanana" name="inp" class="form-control" placeholder="Start typing ..." />
+    <p class="text-success fs-4 my-3">Text: {{textBanana}} </p>
+  </div>
+  <div class="form-group">
+    <label for="techSelect" class="text-start ms-3 mb-2">Choose a Technology:</label>
+    <select [(ngModel)]="course" class="form-control" name="techSelect" id="techSelect">
+      <option value="Entity Framework">Entity Framework Core</option>
+      <option value="Web API">ASP.Net Core Web API</option>
+      <option value="SQL Server">Microsoft SQL Server</option>
+    </select>
+    <p class="text-success fs-4 text-center">{{course}}</p>
+  </div>
+</div>

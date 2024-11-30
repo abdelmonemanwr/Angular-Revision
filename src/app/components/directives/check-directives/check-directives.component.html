@@ -1,0 +1,46 @@
+<div class="bg-light-subtle p-5 text-dark">
+  <h1 class="text-center">Structural Directives</h1>
+  <div class="container mt-3">
+    <div
+      *ngFor="let x of names; let idx = index; let count = count ; let first = first; let last = last; let even = even;"
+      class="bg-dark rounded p-3 my-2">
+      <h1 class="text-center text-warning">#{{idx+1}} Welcome {{x}}</h1>
+      <h3 class="text-info lead my-3">Total Elements = {{count}} </h3>
+      <p class="text-success">Is this the first element in the array? {{first}}</p>
+      <p class="text-light">
+        Consequat cupidatat veniam ad cillum. Deserunt elit adipisicing voluptate excepteur quis dolor minim amet qui
+        non et reprehenderit nostrud. Velit sit deserunt proident dolore dolor ad consequat eiusmod deserunt deserunt
+        minim aliquip pariatur. Sit quis id voluptate tempor qui eiusmod eiusmod magna ipsum ad ut. Cupidatat id officia
+        aliquip anim reprehenderit Lorem fugiat consequat aliqua ipsum. Dolor irure est eu consectetur laborum voluptate
+        esse cupidatat quis elit laborum occaecat fugiat sit. Deserunt proident irure culpa culpa consectetur non do
+        amet qui mollit nisi ut mollit et.
+      </p>
+    </div>
+    <div>
+      <p *ngIf="isEven();else oddSection" class="alert alert-success text-dark fs-3 p-2"> Number {{number}} is even
+      </p>
+      <ng-template #oddSection>
+        <p class="alert alert-danger text-dark fs-3 p-2"> Number {{number}} is odd</p>
+      </ng-template>
+      <button (click)="this.number=this.number+1;" class="btn btn-dark text-info">Increase <i
+          class="bi-plus-circle"></i></button>
+    </div>
+    <div class="bg-dark text-light p-5 my-5 rounded">
+      <div class="form-group">
+        <label for="fav-color">Please, Choose your fav color</label>
+        <select [(ngModel)]="favColor" class="form-control mt-2" name="favColor" id="favColor">
+          <option disabled value="">please choose your fav color</option>
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+        </select>
+        <div [ngSwitch]="favColor" class="text-dark fs-4 my-3">
+          <div *ngSwitchCase="'red'" class="rounded bg-danger p-5">Ur fav color is Red</div>
+          <div *ngSwitchCase="'green'" class="rounded bg-success p-5">Ur fav color is Green</div>
+          <div *ngSwitchCase="'blue'" class="rounded bg-primary p-5">Ur fav color is Blue</div>
+          <div *ngSwitchDefault class="rounded bg-light text-dark p-5">U don't have fav color</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

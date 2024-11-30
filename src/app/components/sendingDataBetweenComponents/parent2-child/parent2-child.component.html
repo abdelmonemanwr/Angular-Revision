@@ -1,0 +1,15 @@
+<div class="bg-primary-subtle p-5 text-dark">
+
+  <h1 class="text-center text-danger">Parent Component</h1>
+
+  <h2 class="alert alert-light mt-5">Parent Data : {{title}}</h2>
+
+  <h2 class="alert alert-info">Data Received from Child1 Component : {{receivedFromChild1}}</h2>
+
+  <h2 class="alert alert-success">Data Received from Child2 Component : {{receivedFromChild2}}</h2>
+
+  <app-child2-parent (childEvent)="getDataFromChild1($event)" [dataFromParent]="title"></app-child2-parent>
+
+  <app-child2-child (child2Event)="getDataFromChild2($event)" [child1Data]="datatoChild2"
+    [parentData]="title"></app-child2-child>
+</div>

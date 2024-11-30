@@ -1,0 +1,13 @@
+<div class="bg-gradient">
+  <div class="container p-5 w-25 mx-auto">
+    <img [src]="imageSource" class="rounded mb-4" alt="Image" />
+    <div class="icons d-flex justify-content-md-evenly gap-4 text-center my-3">
+      <button (click)="GetPreviousImage()" class="btn btn-dark px-3 py-2">
+        <i class="bi bi-arrow-left"></i>
+      </button>
+      <button (click)="GetNextImage()" class="btn btn-dark px-3 py-2">
+        <i class="bi bi-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</div>

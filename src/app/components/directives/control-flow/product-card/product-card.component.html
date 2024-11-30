@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;">
+  <img [src]="myProduct.PimageUrl" class="cardImage card-img-top" [alt]="myProduct.Pname">
+  <div class="card-body">
+    <h5 class="card-title text-center">{{myProduct.Pname}}</h5>
+    <div class="d-flex justify-content-around">
+      <h6 class="text-success">Price: ${{myProduct.Pprice}}</h6>
+      <h6 class="text-success">Quantity: {{myProduct.Pquantity}}</h6>
+    </div>
+    <p class="card-text">{{myProduct.Pdesc}}</p>
+    <a href="#" class="btn btn-success ">Add to cart <i class="bi bi-cart-check"></i></a>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="bg-gradient p-5 text-dark text-center">
+  <h1 #h1Title class="text-warning">Two Way Binding</h1>
+  <div class="container">
+    <div>
+      <input (input)="getText($event)" class="mt-3 form-control" placeholder="Start typing ...">
+      <p class="p-3 m-2 fs-3 text-danger">Input Text: {{text1}}</p>
+    </div>
+
+    <div class="bg-primary-subtle p-3 my-2">
+      <p class="p-3 m-2 fs-3 text-dark">Heading: {{text2}}</p>
+      <button (click)="showText(h1Title)" class="btn btn-success p-2">Show Heading</button>
+    </div>
+
+    <div class="bg-danger-subtle p-3 my-5">
+      <app-inner class="text-dark fs-4"></app-inner>
+      <p class="p-3 mt-3 fs-3 text-secondary">viewChild Text: {{viewChildText}}</p>
+    </div>
+
+    <div class="bg-secondary p-3 my-5">
+      <!-- <app-inner class="text-dark fs-4"></app-inner> -->
+      <button (click)="getViewChildMethod()" class="btn btn-success p-2">View Child Text</button>
+      <p class="p-3 mt-3 fs-3 text-light">viewChild Method: {{viewChildMethod}}</p>
+    </div>
+
+  </div>
+</div>
